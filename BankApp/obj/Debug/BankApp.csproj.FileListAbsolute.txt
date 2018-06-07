@@ -1,0 +1,2 @@
+C:\Users\Carmen\Documents\BankApp\BankApp\obj\Debug\BankApp.csprojAssemblyReference.cache
+C:\Users\Carmen\Documents\BankApp\BankApp\obj\Debug\BankApp.csproj.CoreCompileInputs.cache
