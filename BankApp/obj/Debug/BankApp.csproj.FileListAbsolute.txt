@@ -1,2 +1,7 @@
 C:\Users\Carmen\Documents\BankApp\BankApp\obj\Debug\BankApp.csprojAssemblyReference.cache
 C:\Users\Carmen\Documents\BankApp\BankApp\obj\Debug\BankApp.csproj.CoreCompileInputs.cache
+C:\Users\Carmen\Documents\BankApp\BankApp\bin\Debug\BankApp.exe.config
+C:\Users\Carmen\Documents\BankApp\BankApp\bin\Debug\BankApp.exe
+C:\Users\Carmen\Documents\BankApp\BankApp\bin\Debug\BankApp.pdb
+C:\Users\Carmen\Documents\BankApp\BankApp\obj\Debug\BankApp.exe
+C:\Users\Carmen\Documents\BankApp\BankApp\obj\Debug\BankApp.pdb
