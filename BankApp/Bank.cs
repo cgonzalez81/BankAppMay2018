@@ -8,8 +8,10 @@ namespace BankApp
 {
 	static class Bank
 	{
+		private static List<Account> accounts = new List<Account>();
 		public static Account CreateAccount(string emailAddress,
-			AccountType typeOfAccount= AccountType.Checking, decimal initialAmount = 0.0M)
+			AccountType typeOfAccount= AccountType.Checking, 
+			decimal initialAmount = 0.0M)
 		{
 			//this is a factory example
 			var account = new Account
@@ -21,6 +23,7 @@ namespace BankApp
 			{
 				account.Deposit(initialAmount);
 			}
+			accounts.Add(account);
 			return account;
 		}
 	}
