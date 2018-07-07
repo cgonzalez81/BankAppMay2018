@@ -23,6 +23,7 @@ namespace BankApp
 				Console.WriteLine("2. Deposit");
 				Console.WriteLine("3. Withdraw");
 				Console.WriteLine("4. Print all accounts");
+				Console.WriteLine("5. Print all transactions");
 				Console.Write("Please select an option: ");
 				var option = Console.ReadLine();
 				switch (option)
@@ -53,13 +54,41 @@ namespace BankApp
 
 						break;
 					case "2":
+						PrintAllAccounts();
+						Console.Write("Account Number: ");
+						var accountNumber = Convert.ToInt32(Console.ReadLine());
+
+						Console.Write("Amount to Deposit: ");
+						amount = Convert.ToDecimal(Console.ReadLine());
+
+						Bank.Deposit(accountNumber, amount);
+						Console.WriteLine("Deposit completed successfully ");
 
 						break;
 					case "3":
+						PrintAllAccounts();
+						Console.Write("Account Number: ");
+						accountNumber = Convert.ToInt32(Console.ReadLine());
+
+						Console.Write("Amount to Deposit: ");
+						amount = Convert.ToDecimal(Console.ReadLine());
+
+						Bank.Withdraw(accountNumber, amount);
+						Console.WriteLine("Withdrawal completed successfully ");
 
 						break;
 					case "4":
-
+						PrintAllAccounts();
+						break;
+					case "5":
+						PrintAllAccounts();
+						Console.Write("Account Number: ");
+						accountNumber = Convert.ToInt32(Console.ReadLine());
+						var transactions = Bank.GetAllAccountsByAccountNumber(accountNumber);
+						foreach (var transaction in transactions)
+						{
+							Console.WriteLine($"{transaction.Description}, {transaction.TransactionAmount}, {transaction.TransactionDate}, {transaction.TypeOfTransaction}");
+						}
 						break;
 					default:
 						break;
@@ -112,6 +141,25 @@ namespace BankApp
 				$"CD: {account3.CreatedDate}");*/
 			#endregion
 
+		}
+
+		private static void PrintAllAccounts()
+		{
+			string emailAddress;
+			Console.Write("Email Address: ");
+			//we removed the "var", because we're not reclaiming it, but reusing it
+			emailAddress = Console.ReadLine();
+
+			var accounts = Bank.GetAllAccountsByEmailAddress(emailAddress);
+			foreach (var acct in accounts)
+			{
+				Console.WriteLine($"AN: {acct.AccountNumber}, " +
+				$"Balance: {acct.Balance}, " +
+				$"AT: {acct.TypeOfAccount}, " +
+				$"CD: {acct.CreatedDate}");
+			}
+
+			return emailAddress;
 		}
 	}
 }
