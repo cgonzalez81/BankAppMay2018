@@ -1,25 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace BankApp
 {
-	enum TransactionType
+	public enum TransactionType
 	{
 		Credit,
 		Debit
 	}
 
-	class Transaction
+	public class Transaction
 	{
-		public int TrransactionId { get; set; }
+		[Key]
+		public int TransactionId { get; set; }
+		[Required]
 		public DateTime TransactionDate { get; set; }
 		public string Description { get; set; }
 		public decimal TransactionAmount { get; set; }
 		public TransactionType TypeOfTransaction { get; set; }
 
+		[Required]
+		[ForeignKey("Account")]
 		public int AccountNumber { get; set; }
+		public virtual Account Account { get; set; }
 	}
 }

@@ -5,3 +5,12 @@ C:\Users\Carmen\Documents\BankApp\BankApp\bin\Debug\BankApp.exe
 C:\Users\Carmen\Documents\BankApp\BankApp\bin\Debug\BankApp.pdb
 C:\Users\Carmen\Documents\BankApp\BankApp\obj\Debug\BankApp.exe
 C:\Users\Carmen\Documents\BankApp\BankApp\obj\Debug\BankApp.pdb
+C:\Users\Carmen\Documents\BankApp\BankApp\bin\Debug\EntityFramework.dll
+C:\Users\Carmen\Documents\BankApp\BankApp\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Carmen\Documents\BankApp\BankApp\bin\Debug\EntityFramework.xml
+C:\Users\Carmen\Documents\BankApp\BankApp\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Carmen\Documents\BankApp\BankApp\obj\Debug\BankApp.csproj.CopyComplete
+C:\Users\Carmen\Documents\BankApp\BankApp\obj\Debug\BankApp.Migrations.InitialCreate.resources
+C:\Users\Carmen\Documents\BankApp\BankApp\obj\Debug\BankApp.csproj.GenerateResource.cache
+C:\Users\Carmen\Documents\BankApp\BankApp\obj\Debug\BankApp.Migrations.Relationships.resources
+C:\Users\Carmen\Documents\BankApp\BankApp\obj\Debug\BankApp.Migrations.Validations.resources

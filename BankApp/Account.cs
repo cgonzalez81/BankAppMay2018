@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace BankApp
 {
-	enum AccountType
+	public enum AccountType
 	{
 		Checking,
 		Savings, 
@@ -17,7 +18,7 @@ namespace BankApp
 	/// <summary>
 	/// Bank account
 	/// </summary>
-	class Account
+	public class Account
 	{
 		private static int lastAccountNumber = 0;
 
@@ -25,16 +26,21 @@ namespace BankApp
 		/// <summary>
 		/// unique account number
 		/// </summary>
+		[Key]
 		public int AccountNumber { get; private set; }
 		/// <summary>
 		/// email address of the user on the account
 		/// </summary>
+		[EmailAddress]
+		[Required]
+		[StringLength(50, ErrorMessage ="Email Address must be less than 50 characters in length")]
 		public string EmailAddress { get; set; }
 		//make balance private so user cant determine it
 		public decimal Balance { get; private set; }
 		/// <summary>
 		/// we change type of account from string to  because it's a choice list, not a collection
 		/// </summary>
+		[Required]
 		public AccountType TypeOfAccount { get; set; }
 		public DateTime CreatedDate {get; set; }
 		#endregion

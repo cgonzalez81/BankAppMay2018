@@ -159,7 +159,7 @@ namespace BankApp
 				$"CD: {acct.CreatedDate}");
 			}
 
-			return emailAddress;
+			
 		}
 	}
 }

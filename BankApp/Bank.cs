@@ -8,8 +8,8 @@ namespace BankApp
 {
 	static class Bank
 	{
-		private static List<Account> accounts = new List<Account>();
-		private static List<Transaction> transactions = new List<Transaction>();
+
+		private static BankModel db = new BankModel();
 
 		public static Account CreateAccount(string emailAddress,
 			AccountType typeOfAccount= AccountType.Checking, 
@@ -25,14 +25,16 @@ namespace BankApp
 			{
 				account.Deposit(initialAmount);
 			}
-			accounts.Add(account);
+	
+			db.Accounts.Add(account);
+			db.SaveChanges();
 			return account;
 		}
 
 		public static IEnumerable<Transaction>
 	GetAllAccountsByAccountNumber(int accountNumber)
 		{
-			return transactions.Where(t => t.AccountNumber == accountNumber).OrderByDescending(t => t.TransactionDate);
+			return db.Transactions.Where(t => t.AccountNumber == accountNumber).OrderByDescending(t => t.TransactionDate);
 
 		}
 
@@ -42,7 +44,7 @@ namespace BankApp
 		{
 			//compare the EA of user input with the EA on file
 			//learn about Linq and Lambda & ienumberable vs list
-			return accounts.Where(a => a.EmailAddress == emailAddress);
+			return db.Accounts.Where(a => a.EmailAddress == emailAddress);
 	
 		}
 
@@ -58,7 +60,8 @@ namespace BankApp
 				AccountNumber = accountNumber,
 				TypeOfTransaction = TransactionType.Credit
 			};
-			transactions.Add(transaction);
+			db.Transactions.Add(transaction);
+			db.SaveChanges();
 		}
 
 		public static void Withdraw(int accountNumber, decimal amount)
@@ -74,13 +77,13 @@ namespace BankApp
 				AccountNumber = accountNumber,
 				TypeOfTransaction = TransactionType.Debit
 			};
-			transactions.Add(transaction);
-
+			db.Transactions.Add(transaction);
+			db.SaveChanges();
 		}
 
 		private static Account GetAccountByAccountNumber(int accountNumber)
 		{
-			var account = accounts.Where(a => a.AccountNumber == accountNumber).FirstOrDefault();
+			var account = db.Accounts.Where(a => a.AccountNumber == accountNumber).FirstOrDefault();
 			if (account == null)
 				return null;
 
