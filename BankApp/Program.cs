@@ -70,7 +70,7 @@ namespace BankApp
 						Console.Write("Account Number: ");
 						accountNumber = Convert.ToInt32(Console.ReadLine());
 
-						Console.Write("Amount to Deposit: ");
+						Console.Write("Amount to Withdraw: ");
 						amount = Convert.ToDecimal(Console.ReadLine());
 
 						Bank.Withdraw(accountNumber, amount);

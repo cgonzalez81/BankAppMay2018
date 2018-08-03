@@ -1,9 +1,6 @@
 C:\Users\Carmen\Documents\BankApp\BankApp\obj\Debug\BankApp.csprojAssemblyReference.cache
 C:\Users\Carmen\Documents\BankApp\BankApp\obj\Debug\BankApp.csproj.CoreCompileInputs.cache
-C:\Users\Carmen\Documents\BankApp\BankApp\bin\Debug\BankApp.exe.config
-C:\Users\Carmen\Documents\BankApp\BankApp\bin\Debug\BankApp.exe
 C:\Users\Carmen\Documents\BankApp\BankApp\bin\Debug\BankApp.pdb
-C:\Users\Carmen\Documents\BankApp\BankApp\obj\Debug\BankApp.exe
 C:\Users\Carmen\Documents\BankApp\BankApp\obj\Debug\BankApp.pdb
 C:\Users\Carmen\Documents\BankApp\BankApp\bin\Debug\EntityFramework.dll
 C:\Users\Carmen\Documents\BankApp\BankApp\bin\Debug\EntityFramework.SqlServer.dll
@@ -14,3 +11,6 @@ C:\Users\Carmen\Documents\BankApp\BankApp\obj\Debug\BankApp.Migrations.InitialCr
 C:\Users\Carmen\Documents\BankApp\BankApp\obj\Debug\BankApp.csproj.GenerateResource.cache
 C:\Users\Carmen\Documents\BankApp\BankApp\obj\Debug\BankApp.Migrations.Relationships.resources
 C:\Users\Carmen\Documents\BankApp\BankApp\obj\Debug\BankApp.Migrations.Validations.resources
+C:\Users\Carmen\Documents\BankApp\BankApp\bin\Debug\BankApp.dll.config
+C:\Users\Carmen\Documents\BankApp\BankApp\bin\Debug\BankApp.dll
+C:\Users\Carmen\Documents\BankApp\BankApp\obj\Debug\BankApp.dll
